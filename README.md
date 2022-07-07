@@ -9,5 +9,7 @@ css 연습
 
 사용 스텍들
 
+왜 이런식으로 짰을까 라고 생각하며 CSS 를 적용시키는 나름의 기준을 만든다
+
 -react router v6
 -styled-component
