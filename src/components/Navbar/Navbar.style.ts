@@ -6,7 +6,6 @@ export const Nav = styled.nav`
   height: 80px;
   width: 100%;
   background-color: transparent;
-  border: 1px solid white;
   position: absolute;
   top: 0;
   margin: 0;
