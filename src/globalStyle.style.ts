@@ -11,16 +11,13 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Section = styled.section<TypeOfSection>`
-  padding: 0;
-  margin: '';
-  background-color: '#071c2f';
-  position: '';
   width: '100%';
+  height: 'auto';
   min-width: 'auto';
   max-width: 'auto';
-  height: 'auto';
   max-height: 'auto';
   min-height: 'auto';
+  background-color: '#071c2f';
   @media screen and (max-width: 768px) {
     padding: '70px 0';
   }
@@ -46,7 +43,8 @@ export const Button = styled.button`
   border: 2px solid white;
   border-radius: 0.5rem;
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.08rem;
   cursor: pointer;
 `;
 
