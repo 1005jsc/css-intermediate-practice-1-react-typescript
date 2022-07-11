@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Button, Container } from '../../globalStyle.style';
 import {
   ContentButton,
@@ -19,15 +20,24 @@ type ContentProps = {
 };
 
 const Content = ({ headline, description, buttonLabel }: ContentProps) => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    console.log(inView);
+    console.log(entry);
+  }, [entry]);
+
   return (
     <ContentSection>
       <Container>
-        <ContentDiv reverse={false}>
+        <ContentDiv ref={ref} reverse={false}>
           <ContentImageDiv>
             <ContentImageImg src='./assets/svg/Deal.svg' />
           </ContentImageDiv>
           <ContentMetadataDiv>
-            <ContentMetadataP1>Founded in 2012</ContentMetadataP1>
+            <ContentMetadataP1>Founded in 2014</ContentMetadataP1>
             <ContentMetadataP2>
               We've been in <br />
               business for 9 years
