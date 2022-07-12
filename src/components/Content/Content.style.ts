@@ -8,6 +8,7 @@ export const ContentSection = styled(Section)`
 
 type ContentDivProps = {
   reverse: boolean;
+  backgroundDark: boolean;
 };
 
 export const ContentDiv = styled(motion.div)<ContentDivProps>`
@@ -16,6 +17,8 @@ export const ContentDiv = styled(motion.div)<ContentDivProps>`
   flex-flow: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
   align-items: center;
   height: 30rem;
+  background-color: ${({ backgroundDark }) =>
+    backgroundDark ? '#071c2f' : ''};
 `;
 
 export const ContentImageDiv = styled(motion.div)`
@@ -32,36 +35,46 @@ export const ContentMetadataDiv = styled.div`
   padding: 0 1rem;
 `;
 
-export const ContentMetadataP1 = styled(motion.p)`
+type ContentMetadataPProps = {
+  backgroundDark: boolean;
+};
+
+export const ContentMetadataP1 = styled(motion.p)<ContentMetadataPProps>`
   font-size: 0.8rem;
   color: gray;
   letter-spacing: 0.1rem;
+  color: ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : '')};
 `;
-export const ContentMetadataP2 = styled(motion.p)`
+export const ContentMetadataP2 = styled(motion.p)<ContentMetadataPProps>`
   font-size: 2.6rem;
   font-weight: 800;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : '')};
 `;
-export const ContentMetadataP3 = styled(motion.p)`
+export const ContentMetadataP3 = styled(motion.p)<ContentMetadataPProps>`
   font-size: 1.1rem;
   letter-spacing: 0.06rem;
   color: gray;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  color: ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : '')};
 `;
 
-export const ContentButton = styled(motion.button)`
-  width: 8rem;
-  height: 2.6rem;
+export const ContentButton = styled(motion.button)<ContentMetadataPProps>`
+  width: 10rem;
+  height: 3rem;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 0.5rem;
   color: white;
   font-size: 1.1rem;
+  line-height: 1rem;
   letter-spacing: 0.08rem;
   cursor: pointer;
-  color: blue;
-  border: 2px solid blue;
+  color: ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : 'blue')};
+
+  border: 2px solid
+    ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : 'blue')};
   border-radius: 0.4rem;
 `;

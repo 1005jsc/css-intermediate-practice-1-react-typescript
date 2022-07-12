@@ -15,12 +15,24 @@ import {
 } from './Content.style';
 
 type ContentProps = {
-  headline: string;
-  description: string;
+  reverse: boolean;
+  topLine?: { text: string };
+  headline?: string;
+  description?: string;
   buttonLabel?: string;
+  img?: string;
+  backgroundDark: boolean;
 };
 
-const Content = ({ headline, description, buttonLabel }: ContentProps) => {
+const Content = ({
+  reverse,
+  topLine,
+  headline,
+  description,
+  buttonLabel,
+  img,
+  backgroundDark,
+}: ContentProps) => {
   const { ref, inView, entry } = useInView({
     threshold: 0.3,
   });
@@ -30,9 +42,6 @@ const Content = ({ headline, description, buttonLabel }: ContentProps) => {
     y: 20,
   };
   useEffect(() => {
-    console.log(inView);
-    console.log(entry);
-
     if (inView) {
       animation.start({
         opacity: 1,
@@ -41,7 +50,7 @@ const Content = ({ headline, description, buttonLabel }: ContentProps) => {
     } else {
       animation.start({
         opacity: 0,
-        y: 30,
+        y: 20,
       });
     }
   }, [entry]);
@@ -49,14 +58,14 @@ const Content = ({ headline, description, buttonLabel }: ContentProps) => {
   return (
     <ContentSection>
       <Container>
-        <ContentDiv ref={ref} reverse={false}>
+        <ContentDiv ref={ref} backgroundDark={backgroundDark} reverse={reverse}>
           <ContentImageDiv
             initial={initial}
             animate={animation}
             transition={inView ? { delay: 0.3, duration: 0.6 } : {}}
           >
             <ContentImageImg
-              src='./assets/svg/Deal.svg'
+              src={img}
               whileHover={{ scale: 1.02, rotate: 2 }}
               transition={{ duration: 0.5 }}
             />
@@ -64,32 +73,35 @@ const Content = ({ headline, description, buttonLabel }: ContentProps) => {
           <ContentMetadataDiv>
             <ContentMetadataP1
               initial={initial}
+              backgroundDark={backgroundDark}
               animate={animation}
               transition={inView ? { delay: 0.4, duration: 0.6 } : {}}
             >
-              Founded in 2014
+              {topLine?.text}
             </ContentMetadataP1>
             <ContentMetadataP2
               initial={initial}
               animate={animation}
+              backgroundDark={backgroundDark}
               transition={inView ? { delay: 0.6, duration: 0.6 } : {}}
             >
-              We've been in <br />
-              business for 9 years
+              {headline}
             </ContentMetadataP2>
             <ContentMetadataP3
               initial={initial}
               animate={animation}
+              backgroundDark={backgroundDark}
               transition={inView ? { delay: 0.8, duration: 0.6 } : {}}
             >
-              We have designed and implemented the best cloud security solutions
+              {description}
             </ContentMetadataP3>
             <ContentButton
               initial={initial}
               animate={animation}
+              backgroundDark={backgroundDark}
               transition={inView ? { delay: 1.2, duration: 0.8 } : {}}
             >
-              Find More
+              {buttonLabel}
             </ContentButton>
           </ContentMetadataDiv>
         </ContentDiv>
