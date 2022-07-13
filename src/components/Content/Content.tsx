@@ -42,6 +42,9 @@ const Content = ({
     y: 20,
   };
   useEffect(() => {
+    // console.log(inView);
+    console.log(entry);
+
     if (inView) {
       animation.start({
         opacity: 1,
@@ -56,7 +59,7 @@ const Content = ({
   }, [entry]);
 
   return (
-    <ContentSection>
+    <ContentSection backgroundDark={backgroundDark}>
       <Container>
         <ContentDiv ref={ref} backgroundDark={backgroundDark} reverse={reverse}>
           <ContentImageDiv

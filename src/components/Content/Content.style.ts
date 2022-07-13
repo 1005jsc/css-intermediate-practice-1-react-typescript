@@ -1,9 +1,14 @@
 import styled from 'styled-components';
-import { Button, Section } from '../../globalStyle.style';
+import { Section } from '../../globalStyle.style';
 import { motion } from 'framer-motion';
 
-export const ContentSection = styled(Section)`
-  border: 1px solid white;
+type ContentSectionProps = {
+  backgroundDark: boolean;
+};
+
+export const ContentSection = styled(Section)<ContentSectionProps>`
+  background-color: ${({ backgroundDark }) =>
+    backgroundDark ? '#071c2f' : ''};
 `;
 
 type ContentDivProps = {
@@ -17,8 +22,8 @@ export const ContentDiv = styled(motion.div)<ContentDivProps>`
   flex-flow: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
   align-items: center;
   height: 30rem;
-  background-color: ${({ backgroundDark }) =>
-    backgroundDark ? '#071c2f' : ''};
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 `;
 
 export const ContentImageDiv = styled(motion.div)`
@@ -46,14 +51,14 @@ export const ContentMetadataP1 = styled(motion.p)<ContentMetadataPProps>`
   color: ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : '')};
 `;
 export const ContentMetadataP2 = styled(motion.p)<ContentMetadataPProps>`
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: 800;
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : '')};
 `;
 export const ContentMetadataP3 = styled(motion.p)<ContentMetadataPProps>`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   letter-spacing: 0.06rem;
   color: gray;
   margin-top: 1rem;
