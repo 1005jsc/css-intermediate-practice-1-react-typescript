@@ -4,6 +4,7 @@ import { Container, Section } from '../../globalStyle.style';
 export const HeroSection = styled(Section)`
   /* border: 1px solid white; */
   /* height: 100vh; */
+  width: 98vw;
   height: calc(100vh - 15px);
   padding-top: clamp(70px, 25vh, 220px);
 `;
@@ -12,6 +13,7 @@ export const HeroContainer = styled(Container)``;
 
 export const HeroVideo = styled.video`
   object-fit: cover;
+  width: 100%;
   height: 100%;
   /* background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)); */
   position: absolute;
