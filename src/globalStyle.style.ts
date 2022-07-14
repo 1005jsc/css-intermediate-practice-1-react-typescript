@@ -8,6 +8,14 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   }
+
+  button {
+	outline: 0;
+	cursor: pointer;
+	border: 0;
+  background-color: transparent;
+}
+
 `;
 
 export const Section = styled.section<TypeOfSection>`

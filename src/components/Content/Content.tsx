@@ -42,9 +42,6 @@ const Content = ({
     y: 20,
   };
   useEffect(() => {
-    // console.log(inView);
-    console.log(entry);
-
     if (inView) {
       animation.start({
         opacity: 1,
