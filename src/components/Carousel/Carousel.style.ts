@@ -8,7 +8,7 @@ export const CarouselSection = styled(Section)`
   max-width: 1300px;
   margin: auto;
   padding: 50px 7rem;
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
   /* background-color: blue; */
 `;
 
