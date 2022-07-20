@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat','Ibarra Real Nova', sans-serif;
   }
 
   button {
@@ -35,12 +35,10 @@ export const Container = styled.div`
   max-width: 1300px;
   margin: auto;
   padding: 0 50px;
-  /* border: 1px solid black; */
   position: relative;
   z-index: 1;
   @media screen and (max-width: 960px) {
     padding: 0 30px;
-    /* background-color: red; */
   }
 `;
 

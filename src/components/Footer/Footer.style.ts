@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Container, Section } from '../../globalStyle.style';
-export {};
 
 export const FooterSection = styled(Section)`
   width: 100vw;
@@ -45,6 +44,7 @@ export const FooterDelta = styled.p`
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
+  font-family: Montserrat;
 `;
 
 export const FooterAddressDiv = styled.div`
