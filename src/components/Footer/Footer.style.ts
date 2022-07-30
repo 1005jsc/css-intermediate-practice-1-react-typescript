@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Container, Section } from '../../globalStyle.style';
 
 export const FooterSection = styled(Section)`
-  width: 100vw;
+  /* width: 100vw; */
   margin: auto;
   height: 30rem;
   background-color: #071c2f;

@@ -25,6 +25,22 @@ export const HeroMainHeadingH1 = styled.h1`
   margin: 0;
   /* font-family: 'Ibarra Real Nova'; */
   margin-bottom: 2rem;
+  @media screen and (max-width: 1060px) {
+    font-size: 3.3rem;
+    letter-spacing: 0.1rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 2.3rem;
+    letter-spacing: 0.1rem;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 2.3rem;
+    letter-spacing: 0.1rem;
+  }
+  @media screen and (max-width: 300px) {
+    font-size: 2.3rem;
+    letter-spacing: 0.1rem;
+  }
 `;
 
 export const HeroTextP = styled.p`
@@ -32,6 +48,10 @@ export const HeroTextP = styled.p`
   text-align: center;
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
+  @media screen and (max-width: 1060px) {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
 `;
 
 export const HeroButtonWrapperDiv = styled.div`

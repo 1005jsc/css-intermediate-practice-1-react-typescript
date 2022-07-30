@@ -1,7 +1,7 @@
 import { useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Button, Container } from '../../globalStyle.style';
+import { Container } from '../../globalStyle.style';
 import {
   ContentButton,
   ContentDiv,

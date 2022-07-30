@@ -26,7 +26,7 @@ export const Section = styled.section<TypeOfSection>`
   max-height: 'auto';
   min-height: 'auto';
   background-color: '#071c2f';
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1060px) {
     padding: '70px 0';
   }
 `;

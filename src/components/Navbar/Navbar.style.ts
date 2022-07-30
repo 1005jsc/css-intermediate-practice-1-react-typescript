@@ -28,11 +28,18 @@ export const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
   z-index: 50;
+  @media screen and (max-width: 564px) {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+  }
 `;
 
 export const NavIcon = styled.img`
   margin-right: 1rem;
   width: 3rem;
+  @media screen and (max-width: 564px) {
+    width: 2.4rem;
+  }
 `;
 
 export const NavMenu = styled.ul`
@@ -49,6 +56,10 @@ export const NavItem = styled.li`
   font-size: 1.3rem;
   margin-left: 1.2rem;
   margin-right: 1.2rem;
+  @media screen and (max-width: 564px) {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
 `;
 
 export const NavLinks = styled(Link)``;

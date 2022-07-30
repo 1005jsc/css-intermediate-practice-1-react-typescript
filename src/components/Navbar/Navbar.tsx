@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { data } from '../../data/NavbarData';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import {
   Nav,
   NavbarContainer,
@@ -11,6 +12,20 @@ import {
 } from './Navbar.style';
 
 const Navbar = () => {
+  const [innerWidth, setInnerWidth] = useState<number>(1080);
+
+  const handleResize = () => {
+    setInnerWidth(window.innerWidth);
+    console.log(innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+  });
+
+  useEffect(() => {
+    setInnerWidth(window.innerWidth);
+  }, []);
   return (
     <Nav id='navbar'>
       <NavbarContainer>
@@ -19,11 +34,15 @@ const Navbar = () => {
           Delta
         </NavLogo>
 
-        <NavMenu>
-          {data.map((value, index) => {
-            return <NavItem key={index}>{value.text}</NavItem>;
-          })}
-        </NavMenu>
+        {innerWidth > 580 ? (
+          <NavMenu>
+            {data.map((value, index) => {
+              return <NavItem key={index}>{value.text}</NavItem>;
+            })}
+          </NavMenu>
+        ) : (
+          <GiHamburgerMenu size='3rem' color='#fff' />
+        )}
       </NavbarContainer>
     </Nav>
   );
