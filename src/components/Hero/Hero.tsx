@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button, Container } from '../../globalStyle.style';
 import { useHighestContext } from '../Highest_context/highest_context';
 import {
+  HeroButtonBtn,
   HeroButtonWrapperDiv,
   HeroMainHeadingH1,
   HeroSection,
@@ -14,7 +15,6 @@ const Hero = () => {
 
   const handleResize = () => {
     setInnerWidth(window.innerWidth);
-    // console.log(innerWidth);
   };
 
   useEffect(() => {
@@ -41,9 +41,8 @@ const Hero = () => {
         )}
 
         <HeroButtonWrapperDiv>
-          <Button>Get Started</Button>
-
-          <Button>Find More</Button>
+          <HeroButtonBtn>Get Started</HeroButtonBtn>
+          <HeroButtonBtn>Find More</HeroButtonBtn>
         </HeroButtonWrapperDiv>
       </Container>
     </HeroSection>

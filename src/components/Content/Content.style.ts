@@ -24,10 +24,19 @@ export const ContentDiv = styled(motion.div)<ContentDivProps>`
   height: 30rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  @media screen and (max-width: 900px) {
+    flex-flow: ${({ reverse }) => (reverse ? 'column-reverse' : 'column')};
+  }
 `;
 
 export const ContentImageDiv = styled(motion.div)`
   height: 24rem;
+  /* @media screen and (max-width: 1000px) {
+    height: 22rem;
+  } */
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const ContentImageImg = styled(motion.img)`
@@ -38,6 +47,12 @@ export const ContentMetadataDiv = styled.div`
   width: 32rem;
   height: 22rem;
   padding: 0 1rem;
+  @media screen and (max-width: 1000px) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 type ContentMetadataPProps = {
@@ -49,6 +64,9 @@ export const ContentMetadataP1 = styled(motion.p)<ContentMetadataPProps>`
   color: gray;
   letter-spacing: 0.1rem;
   color: ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : '')};
+  @media screen and (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 export const ContentMetadataP2 = styled(motion.p)<ContentMetadataPProps>`
   font-size: 2.8rem;
@@ -56,6 +74,9 @@ export const ContentMetadataP2 = styled(motion.p)<ContentMetadataPProps>`
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : '')};
+  @media screen and (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 export const ContentMetadataP3 = styled(motion.p)<ContentMetadataPProps>`
   font-size: 1.2rem;
@@ -64,6 +85,9 @@ export const ContentMetadataP3 = styled(motion.p)<ContentMetadataPProps>`
   margin-top: 1rem;
   margin-bottom: 2rem;
   color: ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : '')};
+  @media screen and (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 export const ContentButton = styled(motion.button)<ContentMetadataPProps>`
@@ -82,4 +106,11 @@ export const ContentButton = styled(motion.button)<ContentMetadataPProps>`
   border: 2px solid
     ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : 'blue')};
   border-radius: 0.4rem;
+
+  @media screen and (max-width: 1000px) {
+    width: 24rem;
+    margin-top: 2rem;
+    height: 4rem;
+    font-size: 1.6rem;
+  }
 `;

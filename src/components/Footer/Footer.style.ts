@@ -6,6 +6,11 @@ export const FooterSection = styled(Section)`
   margin: auto;
   height: 30rem;
   background-color: #071c2f;
+  @media screen and (max-width: 740px) {
+    height: auto;
+    padding: 3rem;
+    padding-bottom: 4rem;
+  }
 `;
 
 export const FooterContainer = styled(Container)`
@@ -16,6 +21,12 @@ export const FooterMetadataBigDiv = styled.div`
   margin: auto;
   height: 20rem;
   display: flex;
+  @media screen and (max-width: 740px) {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2rem 0;
+  }
 `;
 
 export const FooterMetadataFirstDiv = styled.div`

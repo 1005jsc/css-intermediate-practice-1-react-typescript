@@ -31,7 +31,7 @@ const Navbar = () => {
       <NavbarContainer>
         <NavLogo to='/'>
           <NavIcon src='./assets/logo.png' alt='logo' />
-          Delta
+          Gamma
         </NavLogo>
 
         {innerWidth > 580 ? (

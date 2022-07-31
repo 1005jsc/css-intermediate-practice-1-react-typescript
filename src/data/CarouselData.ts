@@ -52,3 +52,47 @@ export const settings = {
   //     },
   //   ],
 };
+
+export const settings2 = {
+  arrows: false,
+  slidesToShow: 2,
+  focusOnselect: false,
+  accessability: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1280,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+
+  //     {
+  //       breakpoint: 900,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+};
+
+export const settings3 = {
+  arrows: false,
+  slidesToShow: 1,
+  focusOnselect: false,
+  accessability: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1280,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+
+  //     {
+  //       breakpoint: 900,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+};

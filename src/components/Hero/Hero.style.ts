@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Container, Section } from '../../globalStyle.style';
+import { Button, Container, Section } from '../../globalStyle.style';
 
 export const HeroSection = styled(Section)`
   width: 98vw;
@@ -52,6 +52,10 @@ export const HeroTextP = styled.p`
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
 `;
 
 export const HeroButtonWrapperDiv = styled.div`
@@ -59,4 +63,19 @@ export const HeroButtonWrapperDiv = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  @media screen and (max-width: 468px) {
+    flex-flow: column;
+  }
+  @media screen and (max-width: 300px) {
+    font-size: 2.3rem;
+    letter-spacing: 0.1rem;
+  }
+`;
+export const HeroButtonBtn = styled(Button)`
+  @media screen and (max-width: 468px) {
+    width: 80%;
+    margin-bottom: 0.8rem;
+  }
+  @media screen and (max-width: 300px) {
+  }
 `;

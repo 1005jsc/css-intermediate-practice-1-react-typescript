@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Section } from '../../globalStyle.style';
+import { Container, Section } from '../../globalStyle.style';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -10,6 +10,15 @@ export const CarouselSection = styled(Section)`
   padding: 50px 7rem;
   margin-bottom: 3rem;
   /* background-color: blue; */
+  @media screen and (max-width: 656px) {
+    padding: 10px 3rem;
+  }
+`;
+
+export const CarouselContainer = styled(Container)`
+  /* @media screen and (max-width: 656px) {
+    width: 100%;
+  } */
 `;
 
 export const CarouselTitleAndButtonsDiv = styled.div`
@@ -17,12 +26,21 @@ export const CarouselTitleAndButtonsDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  @media screen and (max-width: 1075px) {
+    flex-flow: column;
+  }
 `;
 
 export const CarouselTitleP = styled.p`
   font-size: 2.4rem;
   letter-spacing: 0.4rem;
   font-weight: 800;
+  margin: 1.2rem;
+  text-align: center;
+  @media screen and (max-width: 1075px) {
+    font-size: 1.8rem;
+    /* margin: 0 0.8rem; */
+  }
 `;
 
 export const CarouselButtonsDiv = styled.div``;
@@ -31,6 +49,14 @@ export const CarouselButtons = styled.button`
   font-size: 3rem;
   color: #20629d;
   background-color: transparent;
+
+  @media screen and (max-width: 1075px) {
+    font-size: 2.6rem;
+    margin: 0 0.8rem;
+  }
+  @media screen and (max-width: 1075px) {
+    font-size: 2.6rem;
+  }
 `;
 
 export const CarouselSlider = styled(Slider)`
