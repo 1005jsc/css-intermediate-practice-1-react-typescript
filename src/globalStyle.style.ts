@@ -56,16 +56,15 @@ export const Button = styled.button`
   position: relative;
 
   &:before {
-    background: red;
+    background: #fff;
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    transition: all 0.6s ease;
     width: 100%;
+    z-index: -1;
     height: 0%;
+    transition: all 0.6s ease;
     transform: translate(-50%, -50%) rotate(45deg);
   }
   &:hover:before {

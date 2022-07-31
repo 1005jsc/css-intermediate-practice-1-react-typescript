@@ -106,6 +106,29 @@ export const ContentButton = styled(motion.button)<ContentMetadataPProps>`
   border: 2px solid
     ${({ backgroundDark }) => (backgroundDark ? '#ffffff' : 'blue')};
   border-radius: 0.4rem;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    background: ${({ backgroundDark }) =>
+      backgroundDark ? '#ffffff' : 'blue'};
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    z-index: -1;
+    height: 0%;
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:hover:before {
+    height: 500%;
+  }
+
+  &:hover {
+    color: ${({ backgroundDark }) => (backgroundDark ? 'black' : '#fff')};
+  }
 
   @media screen and (max-width: 1000px) {
     width: 24rem;
