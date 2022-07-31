@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { TypeOfColumn, TypeOfRow, TypeOfSection } from './globalStyleType';
+import { TypeOfSection } from './globalStyleType';
 
 const GlobalStyle = createGlobalStyle`
   *{

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Button, Container } from '../../globalStyle.style';
-import { useHighestContext } from '../Highest_context/highest_context';
 import {
   HeroButtonBtn,
   HeroButtonWrapperDiv,
